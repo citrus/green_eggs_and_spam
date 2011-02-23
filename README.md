@@ -1,7 +1,7 @@
 Green Eggs and Spam
 ===================
 
-A simple way to filter spam in your rails forms. Green eggs and spam presents the user with a simple question: **What color is this image?**
+A simple way to filter spam in your rails forms. GreenEggsAndSpam presents users with an easy question: **What color is this image?**
 
 You'll supply the images and a key of which one's which. The gem will handle the rest.
 
@@ -18,7 +18,7 @@ Install the gem just like you would any other:
     
     # or with bundler
     
-    gem 'green_eggs_and_spam', '>= 0.1.0'
+    gem 'green_eggs_and_spam', '>= 0.1.1'
         
 
 Create a handful of color coded images and name them something other than their color or design. `1.png`, `banana.png` or `firetruck.png` for example. Tell GreenEggsandSpam which ones which with an initializer:

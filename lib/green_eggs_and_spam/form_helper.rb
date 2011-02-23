@@ -8,9 +8,9 @@ module GreenEggsAndSpam
       choices = GreenEggsAndSpam::AntiSpam.key_index.values.to_a
       choices[choices.length - 1] = "or #{choices.last}"
       raw([
-        label_tag(:antispam, question),
+        label_tag(:antispam, question, :class => 'antispam-label'),
         tag(:br),          
-      	text_field_tag(:antispam, '', :class => 'text required', :title => choices.join(", ")),
+      	text_field_tag(:antispam, '', :class => 'antispam-field text required', :title => choices.join(", ")),
       	hidden_field_tag(:antispam_key, key),
         tag(:br, :class => 'clear'),
       	image_tag(File.join(options[:path], "#{key}.#{options[:extension]}"), :alt => options[:alt], :class => options[:class])

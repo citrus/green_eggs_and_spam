@@ -13,7 +13,25 @@ Rails.backtrace_cleaner.remove_silencers!
 
 # Configure capybara for integration testing
 require "capybara/rails"
-Capybara.default_driver   = :rack_test
+require 'watir'
+require "safariwatir"
+
+module Watir
+  module Container
+  
+    class HiddenField < TextField
+      def input_type; "hidden"; end
+    end
+    
+    def hidden_field(how, what)
+      HiddenField.new(self, scripter, how, what)
+    end
+    
+  end
+end
+
+
+#Capybara.default_driver   = :watir
 Capybara.default_selector = :css
 
 # Run any available migration

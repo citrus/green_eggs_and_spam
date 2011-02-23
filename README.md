@@ -34,16 +34,16 @@ Include the helper in your form:
 
     = form_for @comment, :url => comment_path do |f|
       %p
-		    = f.label :comment
-		    = f.text_field :comment
-		    
-	    // Here's what your interested in:
-	    %p
+        = f.label :comment
+        = f.text_field :comment
+        
+      // Here's what your interested in:
+      %p
         = anti_spam_form, "What color is this piece of bacon?"
-	     
+       
         // the first optional argument is your custom question, the second is the form options hash
         
-		  = f.submit 'send'
+      = f.submit 'send'
 
 
 

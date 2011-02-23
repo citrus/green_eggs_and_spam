@@ -133,7 +133,7 @@ So you're using `.gif`'s or you're images aren't stored in `/images/antispam`. H
 Demo
 ----
 
-If you'd like to see GreenEggsAndSpam in action, there is a demo app located in `test/dummy`.
+If you'd like to see GreenEggsAndSpam in action, there is a demo app running on heroku at [http://green-eggs-and-spam-demo.heroku.com](http://green-eggs-and-spam-demo.heroku.com). There's a similar demo/test-app located in `test/dummy` if you'd like to run it locally.
 
     git://github.com/citrus/green_eggs_and_spam.git
     cd green_eggs_and_spam

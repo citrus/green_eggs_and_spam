@@ -11,7 +11,7 @@ You'll supply the images and a key of which one's which. The gem will handle the
 Usage
 -----
 
-Create a handful of color coded images and name them 1.png, 2.png, etc. Tell Green Eggs and Spam which ones which with an initializer:
+Create a handful of color coded images and name them `1.png`, `2.png`, etc. Tell Green Eggs and Spam which ones which with an initializer:
 
     # config/initializers/green_eggs_and_spam.rb
     
@@ -48,7 +48,20 @@ In your form:
 	     = anti_spam_form, "What color is this piece of bacon?" # the optional argument is your custom question
         
 		  = f.submit 'send'
-		  
+		
+
+Customization:
+
+So you're using `.gif`'s or you don't want the images stored in `/images/antispam`. Here's some available options for the form helper.
+
+    {
+      :alt => 'AntiSpam Image',
+      :class => 'antispam-image',
+      :path => '/images/antispam',
+      :extension => 'jpg'
+    }
+
+  
 
 
 License

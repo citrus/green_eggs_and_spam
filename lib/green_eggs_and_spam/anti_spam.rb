@@ -16,8 +16,6 @@ module GreenEggsAndSpam
     end
     
     def valid?(params={})    
-      puts "valid?"
-      puts params.inspect
       key = params[:antispam_key].to_s
       val = params[:antispam].to_s
       return false if key.empty? || val.empty?

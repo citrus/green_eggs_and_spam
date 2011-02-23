@@ -1,7 +1,7 @@
 class CreateEggs < ActiveRecord::Migration
   def self.up
     create_table :eggs do |t|
-      t.string :color
+      t.string :name
     end
   end
 

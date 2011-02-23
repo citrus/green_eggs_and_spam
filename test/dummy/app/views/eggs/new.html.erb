@@ -1,7 +1,7 @@
-<h1>New Egg</h1>
+<h2>New Egg</h2>
 
 <% if 0 < @egg.errors.to_a.length %>
-  <p>
+  <p class="flash error">
     <b>Errors:</b><br/>
     <%= @egg.errors.to_a.join("<br/>").html_safe %>
   </p>
@@ -9,8 +9,8 @@
 
 <%= form_for @egg do |f| %>
   <p>
-    <%= f.label :color %>
-    <%= f.text_field :color %> 
+    <%= f.label :name %>
+    <%= f.text_field :name %> 
   </p>
   <p>
     <%= anti_spam_form %>

@@ -12,12 +12,11 @@ class EggsController < ApplicationController
 
   def create
     @egg = Egg.new(params[:egg].merge(:antispam => params[:antispam]))
-    
-    puts anti_spam_valid?
-    
     if @egg.save
+      flash[:notice] = "Egg successfully created!"
       redirect_to eggs_path
     else
+      flash[:error] = "Egg could not be saved."
       render :action => 'new'
     end
   end

@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(:version => 20110223073415) do
 
   create_table "eggs", :force => true do |t|
-    t.string "color"
+    t.string "name"
   end
 
 end

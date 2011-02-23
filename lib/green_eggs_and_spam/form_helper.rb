@@ -2,7 +2,7 @@ module GreenEggsAndSpam
 
   module AntiSpamFormHelper
 
-    def anti_spam_form(question="What color is this?", options={})
+    def anti_spam_form(question="What color is this image?", options={})
       key = @antispam_key || 0
       options = { :alt => 'AntiSpam Image', :class => 'antispam-image', :path => '/images/antispam', :extension => 'jpg' }.merge(options)
       choices = GreenEggsAndSpam::AntiSpam.key_index.values.to_a

@@ -1,0 +1,10 @@
+<h1>Eggs!</h1>
+<h3>Why? Because they're delicious!</h3>
+
+<%= link_to "new", new_egg_path %>
+
+<ul>
+  <% @eggs.each do |egg| %>
+    <li><%= egg.inspect %></li>
+  <% end %></ul>
+</ul>

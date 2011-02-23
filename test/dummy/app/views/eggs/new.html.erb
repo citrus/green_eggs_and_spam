@@ -1,0 +1,21 @@
+<h1>New Egg</h1>
+
+<% if 0 < @egg.errors.to_a.length %>
+  <p>
+    <b>Errors:</b><br/>
+    <%= @egg.errors.to_a.join("<br/>").html_safe %>
+  </p>
+<% end %>
+
+<%= form_for @egg do |f| %>
+  <p>
+    <%= f.label :color %>
+    <%= f.text_field :color %> 
+  </p>
+  <p>
+    <%= anti_spam_form %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %> 

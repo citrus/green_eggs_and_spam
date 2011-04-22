@@ -23,7 +23,8 @@ module GreenEggsAndSpam
   end
   
   # Validates a key and answer combo
-  def validates?(params)    
+  def validates?(params) 
+    params ||= {}   
     key = params[:key].to_s
     val = params[:answer].to_s
     return false if key.empty? || val.empty?

@@ -24,13 +24,17 @@ module GreenEggsAndSpam
   
   # Validates a key and answer combo
   def validates?(params) 
-    params ||= {}   
-    key = params[:key].to_s
-    val = params[:answer].to_s
+    key, val = normalized_params(params)
     return false if key.empty? || val.empty?
-    answer = key_index[key.to_s]
-    regex = Regexp.new(answer, 'i')
-    return val.match(regex) != nil
+    answer = key_index[key] rescue ""
+    return val =~ Regexp.new("^#{answer}$", 'i')
   end
+  
+  private
+    
+    def normalized_params(params)
+      params ||= {}
+      [ params[:key].to_s, params[:answer].to_s ]
+    end
   
 end

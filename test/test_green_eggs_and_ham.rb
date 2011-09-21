@@ -50,4 +50,19 @@ class TestGreenEggsAndSpam < Test::Unit::TestCase
     assert GreenEggsAndSpam.key_index.include?(key)
   end
 
+  should "validate key/answer combo" do
+    key = GreenEggsAndSpam.random_key
+    answer = { :key => key, :answer => GreenEggsAndSpam.key_index[key] }
+    assert GreenEggsAndSpam.validates?(answer)
+  end
+
+  should "return false when validation params are incorrect" do
+    answer = { :key => "foo", :answer => "bar" }
+    assert !GreenEggsAndSpam.validates?(answer)
+  end
+    
+  should "return false when validation params are nil" do
+    assert !GreenEggsAndSpam.validates?(nil)
+  end
+
 end

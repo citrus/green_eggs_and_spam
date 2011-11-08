@@ -14,20 +14,20 @@ class TestGreenEggsAndSpam < MiniTest::Unit::TestCase
   end
   
   should "validate key index" do
-    assert_raises RuntimeError do |e|
+    assert_raises RuntimeError do |*e|
       GreenEggsAndSpam.options[:key_index] = {}
-      asset_equal "InvalidKeyIndex", e.message
+      asset_equal "InvalidKeyIndex", e.first.message
     end
-    assert_raises RuntimeError do |e|
+    assert_raises RuntimeError do |*e|
       GreenEggsAndSpam.options[:key_index] = "some string"
-      asset_equal "InvalidKeyIndex", e.message
+      asset_equal "InvalidKeyIndex", e.first.message
     end
   end
   
   should "validate form options" do
-    assert_raises RuntimeError do |e|
+    assert_raises RuntimeError do |*e|
       GreenEggsAndSpam.options[:form_options] = "some string"
-      asset_equal "InvalidKeyIndex", e.message
+      asset_equal "InvalidKeyIndex", e.first.message
     end
   end
   

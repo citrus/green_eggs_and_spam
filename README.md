@@ -1,5 +1,5 @@
-Green Eggs and Spam
-===================
+# Green Eggs and Spam [![Build Status](https://secure.travis-ci.org/citrus/green_eggs_and_spam.png)](http://travis-ci.org/citrus/green_eggs_and_spam)
+
 
 A simple way to filter spam in your rails forms. GreenEggsAndSpam presents users with an easy question: **What color is this image?**
 

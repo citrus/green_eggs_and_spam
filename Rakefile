@@ -1,15 +1,5 @@
-# encoding: UTF-8
-require 'rubygems'
-begin
-  require 'bundler/setup'
-rescue LoadError
-  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
-end
-
-require 'rake'
-require 'rake/testtask'
-
-Bundler::GemHelper.install_tasks
+require "bundler/gem_tasks"
+require "rake/testtask"
 
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'

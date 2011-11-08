@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   
   s.add_dependency("rails", ">= 3.0.0")
   
-  s.add_development_dependency("shoulda", ">= 2.11.3")
+  s.add_development_dependency("minitest_should", ">= 0.1.0")
   s.add_development_dependency("sqlite3", ">= 1.3.3")
   
 end

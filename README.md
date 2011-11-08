@@ -15,7 +15,7 @@ Install the gem just like you would any other:
     
     # or with bundler
     
-    gem 'green_eggs_and_spam', '>= 0.1.1'
+    gem 'green_eggs_and_spam', '>= 0.2.0'
         
 
 Create a handful of color coded images and name them something other than their color or design. `1.png`, `banana.png` or `firetruck.png` for example. Tell GreenEggsandSpam which ones which with an initializer:
@@ -84,7 +84,7 @@ Next, setup your controller with the `has_anti_spam` method. This will prepare t
 ### That's it! 
 
 
-But what if my form isn't validating a model? No big deal, just use the `anti_spam_valid?` helper method.
+But what if my form isn't validating a model? No big deal, just use the `anti_spam_valid?` helper method in your controller.
     
     class CommentsController < ApplicationController
       
@@ -147,10 +147,11 @@ If you'd like to see GreenEggsAndSpam in action, there is a demo app running on 
 Testing
 -------
 
-The very limited Shoulda test suite can be run using `rake test` or just `rake`.
+Tests can be run with `rake test` or just `rake`.
 
     git://github.com/citrus/green_eggs_and_spam.git
     cd green_eggs_and_spam
+    bundle
     rake
     
     

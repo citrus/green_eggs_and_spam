@@ -9,6 +9,3 @@ Rails.backtrace_cleaner.remove_silencers!
 
 # Run any available migration
 ActiveRecord::Migrator.migrate File.expand_path("../dummy/db/migrate/", __FILE__)
-
-# Load support files
-#Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }

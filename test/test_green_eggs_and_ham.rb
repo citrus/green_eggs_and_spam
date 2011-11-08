@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestGreenEggsAndSpam < Test::Unit::TestCase
+class TestGreenEggsAndSpam < MiniTest::Unit::TestCase
   
   should "get key index" do
     assert GreenEggsAndSpam.key_index.is_a?(Hash)

@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestOptions < Test::Unit::TestCase
+class TestOptions < MiniTest::Unit::TestCase
 
   def setup
     GreenEggsAndSpam.options.default!

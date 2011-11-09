@@ -15,7 +15,7 @@ Install the gem just like you would any other:
     
     # or with bundler
     
-    gem 'green_eggs_and_spam', '>= 0.2.0'
+    gem 'green_eggs_and_spam', '>= 0.2.1'
         
 
 Create a handful of color coded images and name them something other than their color or design. `1.png`, `banana.png` or `firetruck.png` for example. Tell GreenEggsandSpam which ones which with an initializer:
@@ -53,8 +53,13 @@ Chances are your form is interacting with a model. If that's the case, hook up t
       
       validates_anti_spam
       
+      # with options
+      # validates_anti_spam :on => :create, :unless => proc{|r| # some logic }
+      
     end
     
+
+
 
 
 Next, setup your controller with the `has_anti_spam` method. This will prepare the controller and give you access to the helper methods.
@@ -62,8 +67,6 @@ Next, setup your controller with the `has_anti_spam` method. This will prepare t
     class EggsController < ApplicationController
       
       has_anti_spam
-      
-      ...
       
       def create
 
@@ -90,12 +93,8 @@ But what if my form isn't validating a model? No big deal, just use the `anti_sp
       
       has_anti_spam
       
-      ...
-      
-      # merge the antispam params into your model's params before validation
       def create
         
-        # validate with the anti spam helper method
         if anti_spam_valid?
           # do something
         end
@@ -121,11 +120,10 @@ So you're using `.gif`'s or you're images aren't stored in `/images/antispam`. H
       :extension => 'jpg'
     }
     
-    # usage
+    # inline
     anti_spam_form, "Your custom color question?", { :extension => 'png', :path => '/images' }
       
     # or set globally in your initializer
-    
     GreenEggsAndSpam.options[:form_options] = { :extension => 'png', :path => '/images' }
 
 
@@ -155,15 +153,7 @@ Tests can be run with `rake test` or just `rake`.
     rake
     
     
-    
-To Do
------
-
-* Write more tests
-* Write more documentation
-* Include default images
-
-    
+        
 License
 -------
 

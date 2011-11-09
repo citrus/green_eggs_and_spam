@@ -12,10 +12,10 @@ module GreenEggsAndSpam
     module ClassMethods
     
       # Installs GreenEggsAndSpam's validation functionality into the supplied model
-      def validates_anti_spam
+      def validates_anti_spam(options={})
         self.class_eval do
           attr_accessor :antispam
-          validates_with GreenEggsAndSpam::AntiSpamValidator
+          validates_with GreenEggsAndSpam::AntiSpamValidator, options
         end
       end
       

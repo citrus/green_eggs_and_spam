@@ -39,7 +39,7 @@ Include the helper in your form:
         
       // Here's what your interested in:
       %p
-        = anti_spam_form, "What color is this piece of bacon?"
+        = anti_spam_form "What color is this piece of bacon?"
        
         // the first optional argument is your custom question, the second is the form options hash
         
